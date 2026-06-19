@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>N.J. Suresh & Associates | Chartered Accountants, Bengaluru</title>
+<meta name="description" content="N.J. Suresh & Associates — Chartered Accountants in Bengaluru since 2003. Audit, Direct & Indirect Tax, FEMA, Company Law, Outsourcing and Labour Law compliance.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#0E2A3D;
+  --ink:#13202B;
+  --parchment:#F6F3EC;
+  --paper:#FBF9F4;
+  --brass:#B8893D;
+  --brass-light:#D8AE6B;
+  --sage:#4F7C72;
+  --rule:rgba(14,42,61,0.14);
+  --rule-light:rgba(246,243,236,0.18);
+  --serif:'Source Serif 4', Georgia, serif;
+  --sans:'Inter', -apple-system, sans-serif;
+  --mono:'JetBrains Mono', monospace;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--sans);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+ul{list-style:none;}
+
+.wrap{max-width:1180px;margin:0 inline auto;margin-left:auto;margin-right:auto;padding-left:32px;padding-right:32px;}
+@media (max-width:640px){.wrap{padding-left:20px;padding-right:20px;}}
+
+.eyebrow{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--brass);
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.eyebrow::before{
+  content:'';
+  width:18px;height:1px;
+  background:var(--brass);
+  display:inline-block;
+}
+
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-0.01em;}
+
+/* ===== Header ===== */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(251,249,244,0.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 32px;max-width:1180px;margin:0 auto;
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand-mark{
+  width:38px;height:38px;border-radius:3px;
+  background:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);color:var(--brass-light);font-weight:700;font-size:16px;
+  flex-shrink:0;
+}
+.brand-text{font-family:var(--serif);font-weight:600;font-size:16.5px;color:var(--navy);letter-spacing:-0.01em;line-height:1.2;}
+.brand-text span{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:0.14em;color:var(--brass);text-transform:uppercase;font-weight:500;margin-top:2px;}
+
+nav.links{display:flex;gap:34px;align-items:center;}
+nav.links a{
+  font-size:13.5px;font-weight:500;color:var(--ink);opacity:0.75;
+  transition:opacity 0.2s;position:relative;
+}
+nav.links a:hover{opacity:1;}
+.nav-cta{
+  display:flex;gap:10px;align-items:center;
+}
+.btn{
+  font-family:var(--sans);font-weight:600;font-size:13.5px;
+  padding:10px 20px;border-radius:2px;
+  display:inline-flex;align-items:center;gap:8px;
+  transition:transform 0.15s, box-shadow 0.15s;
+  border:1px solid transparent;
+  cursor:pointer;
+}
+.btn:active{transform:translateY(1px);}
+.btn-primary{background:var(--navy);color:var(--paper);}
+.btn-primary:hover{box-shadow:0 4px 14px rgba(14,42,61,0.28);}
+.btn-ghost{border-color:var(--rule);color:var(--navy);background:transparent;}
+.btn-ghost:hover{border-color:var(--navy);}
+.btn-wa{background:#1F7A5C;color:#fff;}
+.btn-wa:hover{box-shadow:0 4px 14px rgba(31,122,92,0.35);}
+
+.burger{display:none;background:none;border:none;cursor:pointer;}
+@media (max-width:880px){
+  nav.links{display:none;}
+  .burger{display:block;}
+  .nav-cta .btn-ghost-label{display:none;}
+}
+
+/* ===== Hero ===== */
+.hero{
+  position:relative;
+  background:var(--navy);
+  color:var(--parchment);
+  overflow:hidden;
+  padding:96px 0 0;
+}
+.hero::before{
+  content:'';
+  position:absolute;inset:0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, var(--rule-light) 39px, var(--rule-light) 40px);
+  opacity:0.5;
+  pointer-events:none;
+}
+.hero-grid{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;
+  align-items:end;
+  padding-bottom:0;
+}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:32px;}}
+
+.hero-left{padding-bottom:64px;}
+.hero-tag{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--brass-light);margin-bottom:22px;display:flex;align-items:center;gap:10px;
+}
+.hero-tag::before{content:'';width:24px;height:1px;background:var(--brass-light);}
+.hero h1{
+  font-size:clamp(34px,5vw,58px);
+  color:#fff;margin-bottom:20px;
+}
+.hero h1 em{font-style:normal;color:var(--brass-light);}
+.hero-sub{
+  font-size:16.5px;color:rgba(246,243,236,0.78);max-width:480px;margin-bottom:34px;
+  font-weight:400;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+
+.hero-right{
+  position:relative;z-index:2;
+  border-left:1px solid var(--rule-light);
+  padding:0 0 0 44px;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding-bottom:0;
+}
+@media (max-width:900px){.hero-right{border-left:none;border-top:1px solid var(--rule-light);padding:32px 0 0;}}
+
+.ledger-card{
+  background:rgba(246,243,236,0.06);
+  border:1px solid var(--rule-light);
+  padding:26px 28px;
+  margin-bottom:0;
+}
+.ledger-row{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:13px 0;border-bottom:1px dashed var(--rule-light);
+}
+.ledger-row:last-child{border-bottom:none;}
+.ledger-row .num{font-family:var(--mono);font-size:26px;color:var(--brass-light);font-weight:500;}
+.ledger-row .label{font-size:12.5px;text-align:right;color:rgba(246,243,236,0.7);max-width:170px;line-height:1.4;}
+
+.hero-strip{
+  position:relative;z-index:2;
+  border-top:1px solid var(--rule-light);
+  margin-top:50px;
+  padding:18px 0;
+  display:flex;gap:0;
+  overflow-x:auto;
+}
+.hero-strip-item{
+  font-family:var(--mono);font-size:11.5px;color:rgba(246,243,236,0.62);
+  letter-spacing:0.04em;
+  padding:0 28px;border-right:1px solid var(--rule-light);
+  white-space:nowrap;
+}
+.hero-strip-item:first-child{padding-left:0;}
+.hero-strip-item:last-child{border-right:none;}
+
+/* ===== Section scaffolding ===== */
+section{padding:88px 0;}
+.section-head{margin-bottom:48px;max-width:680px;}
+.section-head h2{font-size:clamp(26px,3.4vw,38px);color:var(--navy);margin-top:14px;}
+.section-head p{color:rgba(19,32,43,0.65);font-size:15.5px;margin-top:14px;max-width:560px;}
+
+.divider{height:1px;background:var(--rule);}
+
+/* ===== Mission / Values ===== */
+.mission{background:var(--parchment);}
+.mission-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;align-items:start;}
+@media (max-width:880px){.mission-grid{grid-template-columns:1fr;gap:36px;}}
+.mission-statement{
+  font-family:var(--serif);font-size:clamp(22px,2.6vw,30px);
+  color:var(--navy);line-height:1.35;
+}
+.mission-statement .mark{color:var(--brass);}
+
+.values-list{display:flex;flex-direction:column;}
+.value-item{
+  display:grid;grid-template-columns:50px 1fr;gap:18px;
+  padding:24px 0;border-top:1px solid var(--rule);
+}
+.value-item:first-child{border-top:1px solid var(--rule);}
+.value-num{font-family:var(--mono);font-size:13px;color:var(--brass);padding-top:3px;}
+.value-item h4{font-size:17px;color:var(--navy);margin-bottom:6px;font-weight:600;}
+.value-item p{font-size:14.5px;color:rgba(19,32,43,0.68);}
+
+/* ===== About ===== */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+@media (max-width:880px){.about-grid{grid-template-columns:1fr;gap:36px;}}
+.about-text p{margin-bottom:16px;font-size:15px;color:rgba(19,32,43,0.78);}
+.about-text strong{color:var(--navy);}
+
+.founder-card{
+  background:var(--navy);color:var(--parchment);
+  padding:36px;position:relative;
+}
+.founder-card::before{
+  content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--brass);
+}
+.founder-role{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--brass-light);margin-bottom:10px;}
+.founder-card h3{color:#fff;font-size:24px;margin-bottom:4px;}
+.founder-card .founder-sub{font-size:13px;color:rgba(246,243,236,0.6);margin-bottom:20px;}
+.founder-card p{font-size:14px;color:rgba(246,243,236,0.82);margin-bottom:12px;}
+.founder-creds{
+  display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;
+}
+.founder-creds span{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:0.04em;
+  border:1px solid var(--rule-light);padding:6px 10px;color:rgba(246,243,236,0.75);
+}
+
+/* ===== Why choose us ===== */
+.why{background:var(--ink);color:var(--parchment);}
+.why .eyebrow{color:var(--brass-light);}
+.why .eyebrow::before{background:var(--brass-light);}
+.why .section-head h2{color:#fff;}
+.why .section-head p{color:rgba(246,243,236,0.6);}
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule-light);}
+@media (max-width:760px){.why-grid{grid-template-columns:1fr;}}
+.why-item{
+  background:var(--ink);padding:30px 32px;
+}
+.why-item p{font-size:14.5px;color:rgba(246,243,236,0.82);}
+.why-item .qmark{font-family:var(--serif);font-size:30px;color:var(--brass);display:block;margin-bottom:10px;line-height:1;}
+
+.sectors-strip{margin-top:50px;}
+.sectors-strip .eyebrow{color:rgba(246,243,236,0.5);margin-bottom:16px;}
+.sector-tags{display:flex;flex-wrap:wrap;gap:10px;}
+.sector-tags span{
+  font-size:12.5px;border:1px solid var(--rule-light);padding:8px 16px;
+  color:rgba(246,243,236,0.85);border-radius:20px;
+}
+
+/* ===== Services ===== */
+.services{background:var(--paper);}
+.service-index{
+  border-top:1px solid var(--rule);
+}
+.service-row{
+  border-bottom:1px solid var(--rule);
+  display:grid;grid-template-columns:280px 1fr;gap:40px;
+  padding:34px 0;
+}
+@media (max-width:760px){.service-row{grid-template-columns:1fr;gap:14px;}}
+.service-row-head{display:flex;flex-direction:column;gap:4px;}
+.service-tab{
+  font-family:var(--mono);font-size:11px;color:var(--brass);letter-spacing:0.08em;
+}
+.service-row h3{font-size:21px;color:var(--navy);}
+.service-items{
+  display:grid;grid-template-columns:1fr 1fr;gap:8px 28px;
+}
+@media (max-width:560px){.service-items{grid-template-columns:1fr;}}
+.service-items li{
+  font-size:14px;color:rgba(19,32,43,0.74);
+  padding-left:16px;position:relative;
+  line-height:1.5;
+}
+.service-items li::before{
+  content:'';position:absolute;left:0;top:9px;width:6px;height:1px;background:var(--sage);
+}
+
+/* ===== Stats / clients band ===== */
+.band{background:var(--brass);color:var(--navy);}
+.band-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;}
+@media (max-width:760px){.band-grid{grid-template-columns:repeat(2,1fr);gap:30px 20px;}}
+.band-item .num{font-family:var(--serif);font-size:clamp(30px,4vw,44px);font-weight:600;}
+.band-item .lbl{font-family:var(--mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;margin-top:6px;opacity:0.75;}
+
+/* ===== Join us ===== */
+.join{background:var(--parchment);}
+.join-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;}
+@media (max-width:880px){.join-grid{grid-template-columns:1fr;gap:36px;}}
+.join-copy h2{color:var(--navy);font-size:clamp(24px,3vw,32px);margin-top:14px;}
+.join-copy p{font-size:15px;color:rgba(19,32,43,0.7);margin-top:16px;}
+.join-perks{margin-top:26px;display:flex;flex-direction:column;gap:12px;}
+.join-perks li{font-size:14px;display:flex;gap:10px;color:rgba(19,32,43,0.78);}
+.join-perks li::before{content:'—';color:var(--brass);flex-shrink:0;}
+
+.form-card{
+  background:#fff;border:1px solid var(--rule);padding:36px;
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;}
+@media (max-width:560px){.form-row{grid-template-columns:1fr;}}
+.field{display:flex;flex-direction:column;gap:7px;}
+.field label{font-size:12px;font-weight:600;color:var(--navy);letter-spacing:0.02em;}
+.field label .req{color:var(--brass);}
+.field input,.field select,.field textarea{
+  font-family:var(--sans);font-size:14px;
+  border:1px solid var(--rule);background:var(--paper);
+  padding:12px 14px;border-radius:2px;color:var(--ink);
+  transition:border-color 0.15s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--navy);
+}
+.field textarea{resize:vertical;min-height:90px;}
+.form-foot{margin-top:8px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.form-note{font-size:12px;color:rgba(19,32,43,0.5);}
+.form-status{font-size:13px;font-weight:500;margin-top:14px;display:none;}
+.form-status.show{display:block;}
+.form-status.ok{color:var(--sage);}
+.form-status.err{color:#A6433A;}
+
+/* ===== Contact ===== */
+.contact{background:var(--navy);color:var(--parchment);}
+.contact .eyebrow{color:var(--brass-light);}
+.contact .eyebrow::before{background:var(--brass-light);}
+.contact-grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:56px;}
+@media (max-width:880px){.contact-grid{grid-template-columns:1fr;gap:36px;}}
+.contact h2{color:#fff;font-size:clamp(24px,3vw,32px);margin-top:14px;}
+.contact-info{margin-top:30px;display:flex;flex-direction:column;gap:24px;}
+.contact-line{display:flex;gap:16px;align-items:flex-start;}
+.contact-icon{
+  width:38px;height:38px;border:1px solid var(--rule-light);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.contact-icon svg{width:17px;height:17px;}
+.contact-line .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--brass-light);margin-bottom:4px;}
+.contact-line .val{font-size:14.5px;color:rgba(246,243,236,0.88);line-height:1.5;}
+.contact-line a:hover{color:var(--brass-light);}
+
+.contact .form-card{background:rgba(246,243,236,0.04);border-color:var(--rule-light);}
+.contact .field label{color:var(--parchment);}
+.contact .field input,.contact .field textarea{
+  background:rgba(246,243,236,0.05);border-color:var(--rule-light);color:var(--parchment);
+}
+.contact .field input::placeholder,.contact .field textarea::placeholder{color:rgba(246,243,236,0.35);}
+.contact .form-note{color:rgba(246,243,236,0.45);}
+
+/* ===== Footer ===== */
+footer{background:var(--ink);color:rgba(246,243,236,0.55);padding:36px 0;}
+.foot-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
+.foot-row .f-brand{font-family:var(--serif);color:#fff;font-size:15px;}
+.foot-row .f-links{display:flex;gap:22px;font-size:12.5px;}
+.foot-row .f-links a:hover{color:#fff;}
+
+/* ===== WhatsApp floating button ===== */
+.wa-float{
+  position:fixed;bottom:24px;right:24px;z-index:60;
+  width:58px;height:58px;border-radius:50%;
+  background:#1F7A5C;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 20px rgba(31,122,92,0.45);
+  transition:transform 0.2s;
+}
+.wa-float:hover{transform:scale(1.07);}
+.wa-float svg{width:28px;height:28px;}
+
+/* Reveal on scroll */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.6s ease, transform 0.6s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;transform:none;transition:none;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="nav">
+    <a href="#top" class="brand">
+      <div class="brand-mark">NJ</div>
+      <div class="brand-text">N.J. Suresh &amp; Associates<span>Chartered Accountants · Est. 2003</span></div>
+    </a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#join">Careers</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://wa.me/919845398976" target="_blank" class="btn btn-wa" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.06 4c-4.92 0-8.9 3.99-8.9 8.9 0 1.56.4 3.08 1.18 4.42L3.1 21.5l4.32-1.14a8.84 8.84 0 0 0 4.63 1.3h.01c4.92 0 8.9-3.99 8.9-8.9 0-2.38-.93-4.6-2.6-6.27l.24-.17zm-5.54 13.7h-.01a7.38 7.38 0 0 1-3.76-1.03l-.27-.16-2.79.74.74-2.7-.18-.28a7.36 7.36 0 0 1-1.13-3.93c0-4.07 3.32-7.39 7.4-7.39 1.98 0 3.84.77 5.23 2.17a7.33 7.33 0 0 1 2.17 5.23c0 4.08-3.32 7.4-7.4 7.4zm4.06-5.54c-.22-.11-1.31-.65-1.51-.72-.2-.07-.35-.11-.5.11-.15.22-.57.72-.7.86-.13.15-.26.16-.48.05-1.33-.66-2.2-1.18-3.08-2.67-.23-.4.23-.37.66-1.23.07-.15.04-.27-.04-.38-.07-.11-.5-1.2-.69-1.65-.18-.43-.37-.37-.5-.38h-.43c-.15 0-.38.06-.58.27-.2.22-.78.76-.78 1.85 0 1.09.8 2.14.91 2.29.11.15 1.55 2.37 3.78 3.23 1.87.74 2.25.6 2.66.56.4-.04 1.31-.54 1.5-1.06.18-.52.18-.96.13-1.06-.05-.1-.2-.16-.42-.27z"/></svg>
+        WhatsApp
+      </a>
+      <a href="#contact" class="btn btn-ghost"><span class="btn-ghost-label">Get in touch</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-tag">Chartered Accountants · Bengaluru</div>
+        <h1>We help growing<br>your <em>business</em>.</h1>
+        <p class="hero-sub">N.J. Suresh &amp; Associates has guided companies, MNCs and entrepreneurs through audit, tax and regulatory complexity since 2003 — with transparency, trust and a friendly approach to every engagement.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Talk to our team</a>
+          <a href="#services" class="btn btn-ghost" style="border-color:rgba(246,243,236,0.3); color:#fff;">See our services</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="ledger-card">
+          <div class="ledger-row"><span class="num">22+</span><span class="label">years of practice, founded 2003</span></div>
+          <div class="ledger-row"><span class="num">7</span><span class="label">service verticals under one roof</span></div>
+          <div class="ledger-row"><span class="num">FCA</span><span class="label">led by a Fellow Chartered Accountant &amp; CISA</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-strip">
+      <span class="hero-strip-item">Audit &amp; Assurance</span>
+      <span class="hero-strip-item">Direct &amp; Indirect Tax</span>
+      <span class="hero-strip-item">Legal &amp; Secretarial</span>
+      <span class="hero-strip-item">FEMA</span>
+      <span class="hero-strip-item">Outsourcing</span>
+      <span class="hero-strip-item">Labour Law Compliance</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MISSION & VALUES ================= -->
+<section class="mission" id="mission">
+  <div class="wrap mission-grid">
+    <div class="reveal">
+      <div class="eyebrow">Our mission</div>
+      <p class="mission-statement" style="margin-top:18px;">To be recognised as <span class="mark">the best service providers</span> in every segment that we operate in.</p>
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">Core values</div>
+      <div class="values-list" style="margin-top:18px;">
+        <div class="value-item">
+          <span class="value-num">01</span>
+          <div><h4>Timely, high-standard delivery</h4><p>Great results delivered on schedule, to the highest possible standards of performance.</p></div>
+        </div>
+        <div class="value-item">
+          <span class="value-num">02</span>
+          <div><h4>Best practices &amp; professionalism</h4><p>Every engagement follows disciplined, professional process from start to finish.</p></div>
+        </div>
+        <div class="value-item">
+          <span class="value-num">03</span>
+          <div><h4>Transparency, trust &amp; confidentiality</h4><p>The foundation of every client relationship we build and keep.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">About NJSA</div>
+      <h2>Two decades of practice, built on one motto.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p><strong>N.J. Suresh and Associates, Chartered Accountants</strong> was established in 2003. NJSA's motto is to deliver great results with passion in whatever it does — a highly energetic team that understands your business needs and delivers the right solutions.</p>
+        <p>NJSA provides a wide range of services that your business needs — from <strong>company incorporation</strong> and detailed project reports for project financing, to obtaining business licences, managing accounting, payroll, direct and indirect tax compliances, MIS reports, secretarial activities, tax filing, assessments, appeals and quick winding-up.</p>
+        <p>We also assist with incentive applications under <strong>M-SIPS</strong>, approvals from the Ministry of Environment, Forest and Climate Change (MoEF) for import of used electronic equipment, and various <strong>DGFT</strong> matters — Advance Authorisation, Restricted Licence, Duty Scrips, export incentives, and Import-Export Code.</p>
+        <p>NJSA has hands-on experience dealing with Income-tax, GST, Service-tax, VAT, Profession Tax, Shops &amp; Establishment, Excise, Entry Tax, Luxury Tax, Customs, DGFT, MoEF, STPI, SEZ, RBI and the Enforcement Directorate.</p>
+      </div>
+      <div class="founder-card reveal">
+        <div class="founder-role">Founder</div>
+        <h3>CA. Suresh N J</h3>
+        <div class="founder-sub">Fellow Chartered Accountant · CISA, ISACA USA</div>
+        <p>20+ years of consulting experience across External Audit, Internal Audit, SOX Audit, IFC, Direct &amp; Indirect Tax, DGFT, SEZ, EOU, Business Valuations, M&amp;A, Legal and Secretarial matters.</p>
+        <p>CA. Suresh N J heads all business verticals at NJSA — mentoring every team member while holding the firm to its highest standard: transparency and professionalism in every engagement.</p>
+        <div class="founder-creds">
+          <span>FCA · ICAI</span>
+          <span>CISA · ISACA</span>
+          <span>Founder, NJSA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Why choose us</div>
+      <h2>An out-of-the-box approach to complex problems.</h2>
+      <p>From large MNC accounting clean-ups to tax structuring that has saved clients millions, NJSA brings a friendly, practical approach to every business need.</p>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-item"><span class="qmark">"</span><p>A friendly approach to your business needs — we design an effective, feasible solution for every problem.</p></div>
+      <div class="why-item"><span class="qmark">"</span><p>Our team has deep expertise in handling large, complex business transactions with best-in-class systems, internal controls and SOPs.</p></div>
+      <div class="why-item"><span class="qmark">"</span><p>An out-of-the-box approach to tax matters has helped clients save millions in taxes over the years.</p></div>
+      <div class="why-item"><span class="qmark">"</span><p>Successfully assisted large global MNCs in untangling and rebuilding their accounting function.</p></div>
+    </div>
+    <div class="sectors-strip reveal">
+      <div class="eyebrow">Who we serve</div>
+      <div class="sector-tags">
+        <span>Small, medium &amp; large enterprises</span>
+        <span>MNCs listed outside India</span>
+        <span>Manufacturing &amp; trading</span>
+        <span>IT &amp; mobile</span>
+        <span>Warehousing &amp; logistics</span>
+        <span>Pharma</span>
+        <span>Automobile</span>
+        <span>Other service sectors</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Services provided</div>
+      <h2>Seven verticals, one accountable team.</h2>
+      <p>Every engagement is handled end-to-end — no handing you off between departments.</p>
+    </div>
+
+    <div class="service-index reveal">
+
+      <div class="service-row">
+        <div class="service-row-head"><span class="service-tab">Vertical 01</span><h3>Audit &amp; Assurance</h3></div>
+        <ul class="service-items">
+          <li>Statutory audit of corporates &amp; non-corporates</li>
+          <li>Statutory audit of trusts</li>
+          <li>Internal audit</li>
+          <li>Special audit</li>
+          <li>Physical verification of inventory &amp; fixed assets</li>
+          <li>IFRS advisory &amp; implementation</li>
+          <li>Certification</li>
+        </ul>
+      </div>
+
+      <div class="service-row">
+        <div class="service-row-head"><span class="service-tab">Vertical 02</span><h3>Direct Taxes</h3></div>
+        <ul class="service-items">
+          <li>Tax planning</li>
+          <li>Tax filing</li>
+          <li>Tax audits</li>
+          <li>Tax assessments</li>
+          <li>Tax appeals</li>
+          <li>Tax refunds</li>
+          <li>Expatriate taxation</li>
+          <li>Transfer pricing compliance — certificate &amp; TP study</li>
+          <li>International taxation</li>
+          <li>Form 15CB certificate for payments to non-residents</li>
+          <li>Any other certification</li>
+          <li>PAN / TAN &amp; corrections</li>
+        </ul>
+      </div>
+
+      <div class="service-row">
+        <div class="service-row-head"><span class="service-tab">Vertical 03</span><h3>Indirect Taxes</h3></div>
+        <ul class="service-items">
+          <li>Tax structuring &amp; implementation support</li>
+          <li>Registration &amp; amendments</li>
+          <li>Returns compilation &amp; filing</li>
+          <li>Assessments &amp; appeals</li>
+          <li>Tax / compliance health checks</li>
+        </ul>
+      </div>
+
+      <div class="service-row">
+        <div class="service-row-head"><span class="service-tab">Vertical 04</span><h3>Legal &amp; Secretarial</h3></div>
+        <ul class="service-items">
+          <li>New company / LLP incorporation</li>
+          <li>Conversion of LLP to company &amp; vice versa</li>
+          <li>Filing of annual returns including XBRL</li>
+          <li>Maintenance of secretarial records</li>
+          <li>Drafting notices, agenda &amp; minutes of meetings</li>
+          <li>Shifting of registered office</li>
+          <li>Enhancement of authorised capital</li>
+          <li>Appointment &amp; resignation of directors</li>
+          <li>Issue of further shares — rights issue &amp; private placement</li>
+          <li>Registration &amp; satisfaction of charge</li>
+          <li>Compounding applications with Central Government</li>
+          <li>Change of financial year</li>
+          <li>Transfer &amp; transmission of shares</li>
+          <li>Alteration of MOA, AOA &amp; LLP agreement</li>
+          <li>Fast-track closure of companies &amp; LLPs</li>
+          <li>Liquidation of companies &amp; LLPs</li>
+          <li>Implementation of ESOP schemes</li>
+          <li>Drafting of SHA / SPA agreements</li>
+          <li>Due diligence review</li>
+        </ul>
+      </div>
+
+      <div class="service-row">
+        <div class="service-row-head"><span class="service-tab">Vertical 05</span><h3>FEMA</h3></div>
+        <ul class="service-items">
+          <li>FDI compliance — filing of ARF &amp; FC-GPR</li>
+          <li>Transfer of shares involving non-residents — FC-TRS</li>
+          <li>DCF valuation of shares</li>
+          <li>Setting up Branch / Liaison Office in India</li>
+          <li>Setting up subsidiary or branch office outside India</li>
+          <li>Approval for ECB</li>
+          <li>Compounding applications for delayed filings</li>
+          <li>Approval for delayed filing of Softex forms</li>
+          <li>Any other RBI / FEMA approvals</li>
+        </ul>
+      </div>
+
+      <div class="service-row">
+        <div class="service-row-head"><span class="service-tab">Vertical 06</span><h3>Outsourcing</h3></div>
+        <ul class="service-items">
+          <li>Payroll</li>
+          <li>Accounting</li>
+          <li>Statutory compliances</li>
+          <li>MIS reporting</li>
+          <li>Statutory audit support services</li>
+          <li>ERP implementation &amp; post-implementation support</li>
+          <li>Temporary staffing</li>
+        </ul>
+      </div>
+
+      <div class="service-row">
+        <div class="service-row-head"><span class="service-tab">Vertical 07</span><h3>Industrial &amp; Labour Law Compliance</h3></div>
+        <ul class="service-items">
+          <li>Factory licence</li>
+          <li>Pollution control</li>
+          <li>Provident Fund</li>
+          <li>Employees' State Insurance</li>
+          <li>Shops &amp; Establishment</li>
+          <li>Trade licence</li>
+          <li>Contract labour</li>
+          <li>Profession tax</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= BAND ================= -->
+<section class="band">
+  <div class="wrap band-grid">
+    <div class="band-item reveal"><div class="num">2003</div><div class="lbl">Year established</div></div>
+    <div class="band-item reveal"><div class="num">20+</div><div class="lbl">Years, founder's experience</div></div>
+    <div class="band-item reveal"><div class="num">7</div><div class="lbl">Service verticals</div></div>
+    <div class="band-item reveal"><div class="num">12+</div><div class="lbl">Regulatory bodies handled</div></div>
+  </div>
+</section>
+
+<!-- ================= JOIN US ================= -->
+<section class="join" id="join">
+  <div class="wrap join-grid">
+    <div class="join-copy reveal">
+      <div class="eyebrow">Careers at NJSA</div>
+      <h2>Build your career on real engagements.</h2>
+      <p>We always have openings across Auditing, Direct Tax, Indirect Tax, Accounting and Company Secretarial work. NJSA offers abundant learning opportunities, and our experienced team ensures fast-track career growth.</p>
+      <ul class="join-perks">
+        <li>Practical, industry-based engagements alongside consulting experience</li>
+        <li>Mentorship from a Fellow Chartered Accountant with 20+ years' experience</li>
+        <li>Exposure to MNCs, large enterprises and complex transactions</li>
+      </ul>
+    </div>
+
+    <div class="form-card reveal">
+      <form id="joinForm">
+        <div class="form-row">
+          <div class="field"><label>Name <span class="req">*</span></label><input type="text" name="name" required></div>
+          <div class="field"><label>Position applying for <span class="req">*</span></label><input type="text" name="position" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>Your email <span class="req">*</span></label><input type="email" name="email" required></div>
+          <div class="field"><label>Mobile <span class="req">*</span></label><input type="tel" name="mobile" required></div>
+        </div>
+        <div class="field" style="margin-bottom:18px;">
+          <label>Your profile <span class="req">*</span></label>
+          <textarea name="profile" required placeholder="Brief background, qualifications and what you're looking for"></textarea>
+        </div>
+        <div class="form-foot">
+          <span class="form-note">We reply to genuine applications within a few working days.</span>
+          <button type="submit" class="btn btn-primary">Submit application</button>
+        </div>
+        <div class="form-status" id="joinStatus"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <div class="eyebrow">Wanna say hello?</div>
+      <h2>Contact us</h2>
+      <div class="contact-info">
+        <div class="contact-line">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D8AE6B" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><div class="lbl">Phone</div><div class="val"><a href="tel:+919845398976">+91 98453 98976</a></div></div>
+        </div>
+        <div class="contact-line">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D8AE6B" stroke-width="1.8"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/><path d="m22 6-10 7L2 6"/></svg></div>
+          <div><div class="lbl">Email</div><div class="val"><a href="mailto:njsuresh@njsuresh.com">njsuresh@njsuresh.com</a></div></div>
+        </div>
+        <div class="contact-line">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D8AE6B" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="lbl">Office</div><div class="val">No.5 &amp; 6, 4th Floor, Doddakallasandra,<br>Kanakapura Road, Bengaluru – 560 062,<br>Karnataka, India</div></div>
+        </div>
+        <div class="contact-line">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D8AE6B" stroke-width="1.8"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.06 4c-4.92 0-8.9 3.99-8.9 8.9 0 1.56.4 3.08 1.18 4.42L3.1 21.5l4.32-1.14a8.84 8.84 0 0 0 4.63 1.3h.01c4.92 0 8.9-3.99 8.9-8.9 0-2.38-.93-4.6-2.6-6.27z"/></svg></div>
+          <div><div class="lbl">WhatsApp</div><div class="val"><a href="https://wa.me/919845398976" target="_blank">Chat with us directly</a></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card reveal">
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="field"><label>Name</label><input type="text" name="name"></div>
+          <div class="field"><label>Mobile <span class="req">*</span></label><input type="tel" name="mobile" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field" style="grid-column:1/-1;"><label>Your email <span class="req">*</span></label><input type="email" name="email" required></div>
+        </div>
+        <div class="field" style="margin-bottom:18px;">
+          <label>Message</label>
+          <textarea name="message" placeholder="Tell us briefly what you need help with"></textarea>
+        </div>
+        <div class="form-foot">
+          <span class="form-note">We typically respond within 1 business day.</span>
+          <button type="submit" class="btn btn-primary" style="background:var(--brass);color:var(--ink);">Send message</button>
+        </div>
+        <div class="form-status" id="contactStatus"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap foot-row">
+    <div class="f-brand">N.J. Suresh &amp; Associates</div>
+    <div class="f-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#join">Careers</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div style="font-size:12px;">NJSA © 2026. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- WhatsApp floating button -->
+<a class="wa-float" href="https://wa.me/919845398976" target="_blank" aria-label="Chat with NJSA on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.06 4c-4.92 0-8.9 3.99-8.9 8.9 0 1.56.4 3.08 1.18 4.42L3.1 21.5l4.32-1.14a8.84 8.84 0 0 0 4.63 1.3h.01c4.92 0 8.9-3.99 8.9-8.9 0-2.38-.93-4.6-2.6-6.27l.24-.17zm-5.54 13.7h-.01a7.38 7.38 0 0 1-3.76-1.03l-.27-.16-2.79.74.74-2.7-.18-.28a7.36 7.36 0 0 1-1.13-3.93c0-4.07 3.32-7.39 7.4-7.39 1.98 0 3.84.77 5.23 2.17a7.33 7.33 0 0 1 2.17 5.23c0 4.08-3.32 7.4-7.4 7.4zm4.06-5.54c-.22-.11-1.31-.65-1.51-.72-.2-.07-.35-.11-.5.11-.15.22-.57.72-.7.86-.13.15-.26.16-.48.05-1.33-.66-2.2-1.18-3.08-2.67-.23-.4.23-.37.66-1.23.07-.15.04-.27-.04-.38-.07-.11-.5-1.2-.69-1.65-.18-.43-.37-.37-.5-.38h-.43c-.15 0-.38.06-.58.27-.2.22-.78.76-.78 1.85 0 1.09.8 2.14.91 2.29.11.15 1.55 2.37 3.78 3.23 1.87.74 2.25.6 2.66.56.4-.04 1.31-.54 1.5-1.06.18-.52.18-.96.13-1.06-.05-.1-.2-.16-.42-.27z"/></svg>
+</a>
+
+<script>
+// ---- Scroll reveal ----
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:0.12});
+revealEls.forEach(el=>io.observe(el));
+
+// ---- Form submission helper ----
+// NOTE: Replace WORKER_URL with your deployed Cloudflare Worker endpoint
+// (same pattern used for the EduGermany contact form -> Resend).
+const WORKER_URL = "https://YOUR-WORKER-SUBDOMAIN.workers.dev";
+
+async function handleSubmit(form, statusEl, formType){
+  const data = Object.fromEntries(new FormData(form).entries());
+  data.formType = formType; // "join" or "contact" — lets the Worker route/label the email
+  const btn = form.querySelector('button[type="submit"]');
+  const originalLabel = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  statusEl.classList.remove('show','ok','err');
+
+  try{
+    const res = await fetch(WORKER_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    if(!res.ok) throw new Error('Request failed');
+    statusEl.textContent = "Thank you — we've received your message and will be in touch shortly.";
+    statusEl.classList.add('show','ok');
+    form.reset();
+  }catch(err){
+    statusEl.textContent = "Something went wrong sending this. Please WhatsApp or call us directly at +91 98453 98976.";
+    statusEl.classList.add('show','err');
+  }finally{
+    btn.disabled = false;
+    btn.textContent = originalLabel;
+  }
+}
+
+document.getElementById('joinForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  handleSubmit(this, document.getElementById('joinStatus'), 'join');
+});
+
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  handleSubmit(this, document.getElementById('contactStatus'), 'contact');
+});
+</script>
+
+</body>
+</html>
