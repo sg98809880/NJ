@@ -13,6 +13,7 @@
 <style>
 :root{
   --navy:#0E2A3D;
+  --purple:#3B2A5C;
   --ink:#13202B;
   --parchment:#F6F3EC;
   --paper:#FBF9F4;
@@ -48,7 +49,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,249,244,0.94);backdr
 .brand-text{font-family:var(--serif);font-weight:600;font-size:15px;color:var(--navy);letter-spacing:-0.01em;line-height:1.2;white-space:nowrap;}
 .brand-text span{display:block;font-family:var(--mono);font-size:9px;letter-spacing:0.12em;color:var(--brass);text-transform:uppercase;font-weight:500;margin-top:2px;}
 @media (max-width:480px){.brand-text{font-size:13px;} .brand-text span{display:none;}}
-nav.links{display:flex;gap:26px;align-items:center;}
+nav.links{display:flex;gap:28px;align-items:center;}
 nav.links a{font-size:13.5px;font-weight:500;color:var(--ink);opacity:0.75;transition:opacity 0.2s;white-space:nowrap;}
 nav.links a:hover{opacity:1;}
 nav.links a.active{opacity:1;color:var(--brass);}
@@ -73,8 +74,7 @@ nav.links a.active{opacity:1;color:var(--brass);}
 .mobile-menu .mm-cta{margin-top:30px;}
 
 /* Page hero (small) */
-.page-hero{background:var(--navy);color:var(--parchment);padding:48px 0 40px;position:relative;overflow:hidden;}
-.page-hero::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg, transparent, transparent 39px, var(--rule-light) 39px, var(--rule-light) 40px);opacity:0.4;pointer-events:none;}
+.page-hero{background:var(--purple);color:var(--parchment);padding:48px 0 40px;position:relative;overflow:hidden;}
 .page-hero .crumb{position:relative;z-index:2;font-family:var(--mono);font-size:11px;color:rgba(246,243,236,0.55);margin-bottom:14px;letter-spacing:0.04em;}
 .page-hero .crumb a:hover{color:var(--brass-light);}
 .page-hero h1{position:relative;z-index:2;font-size:clamp(26px,6vw,42px);color:#fff;max-width:680px;}
@@ -212,6 +212,7 @@ footer{background:var(--ink);color:rgba(246,243,236,0.55);padding:30px 0;}
       <a href="index.html#services">Services</a>
       <a href="index.html#why">Why Us</a>
       <a href="index.html#clients">Clients</a>
+      <a href="index.html#join">Careers</a>
       <a href="tools.html" class="active">Tools</a>
       <a href="index.html#contact">Contact</a>
     </nav>
@@ -236,6 +237,7 @@ footer{background:var(--ink);color:rgba(246,243,236,0.55);padding:30px 0;}
   <a href="index.html#services">Services</a>
   <a href="index.html#why">Why Us</a>
   <a href="index.html#clients">Clients</a>
+  <a href="index.html#join">Careers</a>
   <a href="tools.html">Tools</a>
   <a href="index.html#contact">Contact</a>
   <a href="https://wa.me/919845398976" target="_blank" rel="noopener" class="btn btn-wa mm-cta btn-block">Chat on WhatsApp</a>
@@ -462,6 +464,7 @@ footer{background:var(--ink);color:rgba(246,243,236,0.55);padding:30px 0;}
     <div class="f-links">
       <a href="index.html#about">About</a>
       <a href="index.html#services">Services</a>
+      <a href="index.html#join">Careers</a>
       <a href="tools.html">Tools</a>
       <a href="index.html#contact">Contact</a>
     </div>
