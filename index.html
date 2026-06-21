@@ -13,12 +13,14 @@
 <style>
 :root{
   --navy:#0E2A3D;
+  --purple:#3B2A5C;
   --ink:#13202B;
   --parchment:#F6F3EC;
   --paper:#FBF9F4;
   --brass:#B8893D;
   --brass-light:#D8AE6B;
   --sage:#4F7C72;
+  --sage-light:#7FA89C;
   --rule:rgba(14,42,61,0.14);
   --rule-light:rgba(246,243,236,0.18);
   --serif:'Source Serif 4', Georgia, serif;
@@ -163,20 +165,12 @@ nav.links a:hover{opacity:1;}
 /* ===== Hero ===== */
 .hero{
   position:relative;
-  background:var(--navy);
+  background:var(--purple);
   color:var(--parchment);
   overflow:hidden;
   padding:56px 0 0;
 }
 @media (min-width:880px){.hero{padding-top:88px;}}
-.hero::before{
-  content:'';
-  position:absolute;inset:0;
-  background-image:
-    repeating-linear-gradient(0deg, transparent, transparent 39px, var(--rule-light) 39px, var(--rule-light) 40px);
-  opacity:0.45;
-  pointer-events:none;
-}
 .hero-grid{
   position:relative;z-index:2;
   display:grid;grid-template-columns:1fr;gap:32px;
@@ -231,21 +225,33 @@ nav.links a:hover{opacity:1;}
   position:relative;z-index:2;
   border-top:1px solid var(--rule-light);
   margin-top:36px;
-  padding:16px 0;
-  display:flex;gap:0;
-  overflow-x:auto;
-  -webkit-overflow-scrolling:touch;
-  scrollbar-width:none;
+  padding:24px 0 4px;
+  display:flex;flex-wrap:wrap;gap:10px;
 }
-.hero-strip::-webkit-scrollbar{display:none;}
-.hero-strip-item{
-  font-family:var(--mono);font-size:11px;color:rgba(246,243,236,0.62);
-  letter-spacing:0.03em;
-  padding:0 22px;border-right:1px solid var(--rule-light);
+.pill{
+  font-family:var(--sans);font-weight:600;font-size:12.5px;
+  letter-spacing:0.01em;
+  padding:10px 18px;
+  border-radius:30px;
   white-space:nowrap;
+  border:1px solid transparent;
+  display:inline-flex;align-items:center;gap:8px;
 }
-.hero-strip-item:first-child{padding-left:0;}
-.hero-strip-item:last-child{border-right:none;padding-right:0;}
+.pill::before{
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:currentColor;
+  flex-shrink:0;
+}
+.pill-1{background:rgba(216,174,107,0.14); color:var(--brass-light); border-color:rgba(216,174,107,0.35);}
+.pill-2{background:rgba(127,168,156,0.14); color:var(--sage-light); border-color:rgba(127,168,156,0.35);}
+.pill-3{background:rgba(201,140,140,0.14); color:#E0A0A0; border-color:rgba(224,160,160,0.35);}
+.pill-4{background:rgba(160,150,220,0.14); color:#B5AAE8; border-color:rgba(181,170,232,0.35);}
+.pill-5{background:rgba(120,180,210,0.14); color:#8FC3DE; border-color:rgba(143,195,222,0.35);}
+.pill-6{background:rgba(216,140,90,0.14); color:#E3A171; border-color:rgba(227,161,113,0.35);}
+@media (max-width:480px){
+  .hero-strip{gap:8px;}
+  .pill{font-size:12px;padding:9px 15px;}
+}
 
 /* ===== Section scaffolding ===== */
 section{padding:60px 0;}
@@ -579,12 +585,12 @@ table, pre, img, video, iframe{max-width:100%;}
       </div>
     </div>
     <div class="hero-strip">
-      <span class="hero-strip-item">Audit &amp; Assurance</span>
-      <span class="hero-strip-item">Direct &amp; Indirect Tax</span>
-      <span class="hero-strip-item">Legal &amp; Secretarial</span>
-      <span class="hero-strip-item">FEMA</span>
-      <span class="hero-strip-item">Outsourcing</span>
-      <span class="hero-strip-item">Labour Law Compliance</span>
+      <span class="pill pill-1">Audit &amp; Assurance</span>
+      <span class="pill pill-2">Direct &amp; Indirect Tax</span>
+      <span class="pill pill-3">Legal &amp; Secretarial</span>
+      <span class="pill pill-4">FEMA</span>
+      <span class="pill pill-5">Outsourcing</span>
+      <span class="pill pill-6">Labour Law Compliance</span>
     </div>
   </div>
 </section>
